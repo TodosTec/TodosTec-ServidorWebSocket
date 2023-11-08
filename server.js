@@ -1,6 +1,9 @@
 const app = require('express')()
 const server = require('http').createServer(app)
-const io = require('socket.io')(server, { cors: { origin: 'https://mude.onrender.com/' } })
+const io = require('socket.io')(server, { cors: { 
+    origins: "*:*",
+    methods: '*:*'
+} })
 
 const users = []
 const mensagens = []
